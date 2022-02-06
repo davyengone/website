@@ -37,6 +37,7 @@ const GAScript = () => {
         `}
       </Script>
       <Script strategy="lazyOnload" src="https://www.videoask.com/embed/embed.js" />
+      <Script strategy="lazyOnload" src="https://cdn.splitbee.io/sb.js" />
     </>
   )
 }
