@@ -1,36 +1,13 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-function onLoad() {
-  window.VIDEOASK_EMBED_CONFIG = {
-    kind: 'widget',
-    url: 'https://www.videoask.com/fitxs0ezv',
-    options: {
-      widgetType: 'VideoThumbnailSmall',
-      text: 'Talk to me',
-      backgroundColor: '#FE0030',
-      position: 'bottom-right',
-      dismissible: false,
-    },
-  }
-}
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicons/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicons/favicon-16x16.png"
-          />
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/images/davyengone.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/images/davyengone.png" />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
           <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#000000" />
@@ -46,8 +23,6 @@ class MyDocument extends Document {
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
           <Main />
           <NextScript />
-          <script async onLoad={onLoad}></script>
-          <script async src="https://www.videoask.com/embed/embed.js"></script>
         </body>
       </Html>
     )

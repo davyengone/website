@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 const GAScript = () => {
   return (
     <>
-      <Script
+      {/* <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${siteMetadata.analytics.googleAnalyticsId}`}
       />
@@ -19,7 +19,24 @@ const GAScript = () => {
               page_path: window.location.pathname,
             });
         `}
+      </Script> */}
+
+      <Script strategy="lazyOnload" id="video-ask">
+        {`
+          window.VIDEOASK_EMBED_CONFIG = {
+            kind: 'widget',
+            url: 'https://www.videoask.com/fitxs0ezv',
+            options: {
+              widgetType: 'VideoThumbnailSmall',
+              text: 'Talk to me',
+              backgroundColor: '#FE0030',
+              position: 'bottom-right',
+              dismissible: false,
+            },
+          }
+        `}
       </Script>
+      <Script strategy="lazyOnload" src="https://www.videoask.com/embed/embed.js" />
     </>
   )
 }
