@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 
 const Disqus = ({ frontMatter }) => {
-  const [enableLoadComments, setEnabledLoadComments] = useState(true)
+  const [enableLoadComments, setEnabledLoadComments] = useState(false)
 
   const COMMENTS_ID = 'disqus_thread'
 
